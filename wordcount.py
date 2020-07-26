@@ -1,5 +1,7 @@
 # put your code here.
 
+import re
+
 def word_count(txt_file):
 
     lines = open(txt_file)
@@ -10,10 +12,11 @@ def word_count(txt_file):
         word = line.split()
     
         for item in word:
-            if item in word_counts:
-                word_counts[item] += 1
+            stripped = re.sub(r'\W+', '', item)
+            if stripped in word_counts:
+                word_counts[stripped] += 1
             else:
-                word_counts[item] = word_counts.get(item, 0) + 1
+                word_counts[stripped] = word_counts.get(stripped, 0) + 1
     print(word_counts)
     return word_counts
 
