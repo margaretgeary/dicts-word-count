@@ -12,7 +12,7 @@ def word_count(txt_file):
         word = line.split()
     
         for item in word:
-            stripped = re.sub(r'\W+', item)
+            stripped = re.sub(r'\W+', '', item)
             if stripped in word_counts:
                 word_counts[stripped] += 1
             else:
