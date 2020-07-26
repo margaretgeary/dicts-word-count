@@ -16,5 +16,5 @@ def word_count(txt_file):
                 word_counts[item] = word_counts.get(item, 0) + 1
     print(word_counts)
     return word_counts
-
+"yaaay"
 word_count("test.txt")
