@@ -19,5 +19,5 @@ def word_count(txt_file):
                 word_counts[stripped] = word_counts.get(stripped, 0) + 1
     print(word_counts)
     return word_counts
-
+"yaaay"
 word_count("test.txt")
